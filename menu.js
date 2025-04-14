@@ -8,7 +8,7 @@ document.getElementById("menu").innerHTML+=`
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="https://en.wikipedia.org/wiki/Nobel_Prize">Nobel wiki</a>
+          <a class="nav-link" target="blank" href="https://en.wikipedia.org/wiki/Nobel_Prize">Nobel wiki</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
