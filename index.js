@@ -8,22 +8,32 @@ function megjelenit(y){
     console.log(y)
 
     let sz=""
+    let sorszam = 0;
 
     for (const elem of y.prizes) {
         sz+=`
-        <div>
-        <div id="keret" class="row">
-        <div class="col-sm-3"><div id="szegely">
+       
+        <div class="col-sm-3">
+        <div id="szegely" data-bs-toggle="modal" data-bs-target="#myModal" onclick="reszletkiir(${sorszam},${elem.year})">
+        
         <p>${elem.year}</p>
         <p>${elem.category}</p>
-        </div></div>
         </div>
+        </div>
+
+
+
         
-        </div>
+        
         `
+
+        sorszam++;
     }
 
 
     document.getElementById("keret").innerHTML=sz
 }
 
+function reszletkiir(sorszam,elem){
+console.log(sorszam,elem)
+}
