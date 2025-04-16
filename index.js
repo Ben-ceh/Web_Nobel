@@ -12,8 +12,13 @@ function megjelenit(y){
     for (const elem of y.prizes) {
         sz+=`
         <div>
+        <div id="keret" class="row">
+        <div class="col-sm-3"><div id="szegely">
         <p>${elem.year}</p>
         <p>${elem.category}</p>
+        </div></div>
+        </div>
+        
         </div>
         `
     }
