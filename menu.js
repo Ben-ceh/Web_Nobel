@@ -12,7 +12,7 @@ document.getElementById("menu").innerHTML=`
           <a class="nav-link" href="index.html">Összes díj</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="evKeress.html">Év keress</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
