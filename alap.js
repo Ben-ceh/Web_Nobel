@@ -1,10 +1,10 @@
-let tomb = []
+let tomb=[]
 fetch("https://api.nobelprize.org/v1/prize.json")
 .then(x=>x.json())
 .then(y=>megjelenit(y))
 
 function megjelenit(y){
-    tomb = y
+    tomb=y
     console.log(y)
     let sz=""
     let sorszam=0
@@ -26,20 +26,21 @@ function megjelenit(y){
 
 function reszletKiir(sorszam){
     console.log(sorszam)
-    console.log(tomb)
-    // alert(JSON.stringify(tomb))
-    document.getElementById("modalFej").innerHTML=tomb.prizes[sorszam].year+ " " + tomb.prizes[sorszam].category
-let sz = `<ol>`
-  for (const elem of tomb.prizes[sorszam].laureates) {
-      sz+=`<li>
-        <p>
-        ${elem.firstname} ${elem.surname}
-        </p>
-        <p>
-        ${elem.motivation} 
-        </p>
-            </li>`
-  }
-  sz+=`</ol>`
-  document.getElementById("modalTorzs").innerHTML+=sz
+    //alert(JSON.stringify(tomb))
+    //console.log(tomb)
+    document.getElementById("modalFej").innerHTML=tomb.prizes[sorszam].year+" "+tomb.prizes[sorszam].category
+    let sz=`<ol>`
+    for (const elem of tomb.prizes[sorszam].laureates) {
+        sz+=`
+            <li>
+            <p>${elem.firstname} ${elem.surname}
+            </p>
+            <p>
+            ${elem.motivation}
+            </p>
+            </li>
+        `
+    } 
+    sz+=`</ol>`
+    document.getElementById("modalTorzs").innerHTML=sz
 }
